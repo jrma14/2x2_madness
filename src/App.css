@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moveCountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.moveCount {
+  margin: 0px;
+  font-size: 72px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.moveCountLabel {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.outside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+
+.outside>* {
+  flex: 1;
+}
+
+.outside>:nth-child(3) {
+  flex: 10;
+}
+
+.grid {
+  height: 100%;
+}
+
+.congratulations {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+
+.abs {
+  position: absolute;
+}
+
+img {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.button {
+  border-radius: 100%;
+  opacity: 100%;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -13px;
+  right: -13px;
+}
+
+.selectedbutton {
+  border-radius: 100%;
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -13px;
+  right: -13px;
+}
+
+.button:hover {
+  background-color: red;
+  opacity: 50%;
+}
+
+.rotate {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.actionButton {
+  filter: invert(10%) sepia(23%) saturate(5617%) hue-rotate(202deg) brightness(95%) contrast(97%);
+
+}
+
+.actionButton:hover {
+  opacity: 75%;
+}
+
+.rotateButton {
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+.configSelect {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.configSelect>button {
+  width: 100px;
+  height: 100px;
+  background-color: #092449;
   color: white;
+  font-size: 48px;
+  border-radius: 25%;
+  border-width: 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.configSelect>button:hover {
+  opacity: 75%;
 }
