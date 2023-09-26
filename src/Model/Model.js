@@ -72,7 +72,6 @@ export class Model {
     }
 
     checkWin() {
-        console.log(this.config);
         return this.config.every(row => {
             return row.every(cell => {
                 return cell === this.backgroundColor

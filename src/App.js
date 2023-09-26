@@ -24,10 +24,6 @@ function App() {
   }
 
   useEffect(() => {
-    setModel(new Model(config))
-  }, [config])
-
-  useEffect(() => {
     modelRef.current = model
   }, [model])
 
@@ -49,6 +45,10 @@ function App() {
     update()
   }
 
+  let updateConfig = (c) => {
+    setModel(new Model(c))
+  }
+
   return (
     <div className='outside'>
       {model.hasWon && <Congratulations config={config.numColumns} numMoves={model.numMoves} />}
@@ -62,9 +62,9 @@ function App() {
       </div>}
       <div className='configSelect'>
         {!model.hasWon && <img draggable='false' width={100} src={reset} className='actionButton' onClick={e => setModel(new Model(config))} />}
-        <button onClick={e => setConfig(config_4x4)}>4x4</button>
-        <button onClick={e => setConfig(config_5x5)}>5x5</button>
-        <button onClick={e => setConfig(config_6x6)}>6x6</button>
+        <button onClick={e => { setConfig(config_4x4); updateConfig(config_4x4); }}>4x4</button>
+        <button onClick={e => { setConfig(config_5x5); updateConfig(config_5x5); }}>5x5</button>
+        <button onClick={e => { setConfig(config_6x6); updateConfig(config_6x6); }}>6x6</button>
       </div>
       {!model.hasWon && <Grid config={config} model={model} update={update} />}
       {!model.hasWon &&
