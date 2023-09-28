@@ -12,7 +12,7 @@ export class Model {
         this.config = [[]]
         this.selectedGroup = new Group(-1, -1)
         this.hasWon = false
-        this.backgroundColor = 'grey'
+        this.backgroundColor = 'white'
         for (let i = 0; i < configuration.numRows; i++)
         {
             this.config[i] = []

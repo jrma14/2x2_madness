@@ -56,10 +56,10 @@ export default function Grid({ config, model, update }) {
                             }
                             if (col <= model.selectedGroup.j && col >= model.selectedGroup.j - 1 && row <= model.selectedGroup.i && row >= model.selectedGroup.i - 1)
                             {
-                                style['border'] = '5px solid red'
+                                style['border'] = '3px solid red'
                             } else
                             {
-                                style['border'] = '5px solid blue'
+                                style['border'] = '3px solid black'
                             }
                             return (
                                 <div style={style}>

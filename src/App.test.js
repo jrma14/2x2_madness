@@ -49,7 +49,7 @@ test('rotate group CCW', () => {
 
 test('congratulations', () => {
   render(<Congratulations />)
-  expect(screen.getByText('congrats!')).toBeInTheDocument()
+  expect(screen.getByText('Congratulations!')).toBeInTheDocument()
 })
 
 test('click', () => {
@@ -92,4 +92,22 @@ test('keypress cw', () => {
   model_2.config[i + 1][j + 1] = model_2.config[i][j + 1]
   model_2.config[i][j + 1] = temp
   expect(model.config).toEqual(model_2.config)
+})
+
+test('remove group', () => {
+  let config = {
+    "name": "Configuration #1",
+    "numRows": "2",
+    "numColumns": "2",
+    "baseSquares": [
+      { "color": "green", "row": "0", "column": "0" },
+      { "color": "green", "row": "0", "column": "1" },
+      { "color": "green", "row": "1", "column": "0" },
+      { "color": "green", "row": "1", "column": "1" },
+    ]
+  }
+  let model = new Model(config)
+  model.selectGroup(new Group(1, 1))
+  expect(model.hasWon).toBe(true)
+  expect(model.numMoves).toBe(0)
 })
