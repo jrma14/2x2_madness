@@ -93,7 +93,9 @@ export class Model {
         {
             if (this.canRemove(group))
             {
+                this.numMoves++
                 this.remove(group)
+                group = new Group(-1, -1)
                 this.hasWon = this.checkWin()
             }
             this.selectedGroup = group

@@ -1,3 +1,7 @@
+Try this link: https://d1txlwi9kl2ydm.cloudfront.net
+
+or
+
 You should be able to just run npm start. If you get any module errors, just run npm i and then try npm start again.
 
 ## Available Scripts
