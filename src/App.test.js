@@ -109,5 +109,5 @@ test('remove group', () => {
   let model = new Model(config)
   model.selectGroup(new Group(1, 1))
   expect(model.hasWon).toBe(true)
-  expect(model.numMoves).toBe(0)
+  expect(model.numMoves).toBe(1)
 })
